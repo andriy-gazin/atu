@@ -9,7 +9,8 @@ get_geometry <- function(id) {
   
   geometry <- str_extract(string = page, pattern = '(\\{\\"wkb_geometry\\":.+)') %>% 
     str_replace("\\}$", "") %>% 
-    fromJSON()
+    fromJSON() %>% 
+    rbind.data.frame(stringsAsFactors = FALSE)
   
   return(geometry)
 }
