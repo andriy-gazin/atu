@@ -12,5 +12,7 @@ get_geometry <- function(id) {
     fromJSON() %>% 
     rbind.data.frame(stringsAsFactors = FALSE)
   
+  geometry$id <- id
+  
   return(geometry)
 }
