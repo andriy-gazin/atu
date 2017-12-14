@@ -1,3 +1,5 @@
 get_subregions_vectorized.R
 get_region_info.R
 get_geometries.R
+.RData
+.Rhistory
